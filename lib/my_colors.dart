@@ -17,6 +17,9 @@ class solidcolors{
   static const Color subtext=Color.fromARGB(255, 197, 197, 197);
   static const Color hashtag=Color.fromARGB(255, 255, 255, 255);
   static const Color seemore=Color.fromARGB(255, 40, 107, 184);
+  static const Color dividercolor=Color.fromARGB(255, 112 , 112, 112);
+  static const Color hinttext=Color.fromARGB(255, 219 , 219, 219);
+  
 }
 class gradiantcolors{
   static const List <Color>bottomnav=[ Color.fromARGB(255, 25, 0, 94),

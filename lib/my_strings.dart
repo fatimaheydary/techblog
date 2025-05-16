@@ -4,5 +4,15 @@ class MyStrings {
   static const String RelatedArticle="نوشته های مرتبط";
   static const String SubmitArticle="ارسال مقاله";
   static const String SubmitPodcasts="ارسال پادکست";
+  static const String imageprofileeddit="ویرایش عکس پروفایل";
+  static const String myfavblogs="مقالات مورد علاقه من";
+  static const String myfavpodcast="پادکست های مورد علاقه من";
+  static const String logout="خروج از حساب کاربری";
+  static const String welcome=""" به تک‌بلاگ خوش اومدی
+
+برای ارسال مطلب و پادکست باید حتما 
+ثبت نام کنی """;
+static const String insertemail="لطفا ایمیل خودت رو وارد کن";
+static const String myemail="fatimaheidari.2002@gmail.com";
 
 }

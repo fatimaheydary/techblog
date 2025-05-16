@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+import 'package:tech_blog/assets.dart' as techBlogAssets;
 import 'package:tech_blog/gen/assets.gen.dart';
 import 'package:tech_blog/models/data_models.dart';
 

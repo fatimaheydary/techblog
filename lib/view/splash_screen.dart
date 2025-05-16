@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image(image: Assets.images.logo.provider(),height: 64,),
+              Image(image: AssetImage(Assets.images.logo.path), height: 64,),
              SizedBox(height: 32,),
               SpinKitFadingCube(
                 color: solidcolors.primarycolor,

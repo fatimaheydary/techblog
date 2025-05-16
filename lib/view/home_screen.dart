@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:tech_blog/assets.dart' as customAssets;
 import 'package:tech_blog/gen/assets.gen.dart';
 import 'package:tech_blog/models/fake_data.dart';
 import 'package:tech_blog/my_colors.dart';
@@ -116,7 +117,7 @@ class seemorepodcast extends StatelessWidget {
       child: Row(
         children: [
           ImageIcon(
-            Assets.icons.micicon.provider(),
+            AssetImage(Assets.icons.micicon.path),
             color: solidcolors.seemore,
           ),
           SizedBox(width: 8),
@@ -256,7 +257,7 @@ class seemoreblog extends StatelessWidget {
       child: Row(
         children: [
           ImageIcon(
-            Assets.icons.bluepen.provider(),
+            AssetImage(Assets.icons.bluepen.path),
             color: solidcolors.seemore,
           ),
           SizedBox(width: 8),
@@ -313,7 +314,7 @@ class homepagetaglist extends StatelessWidget {
                 child: Row(
                   children: [
                     ImageIcon(
-                      Assets.icons.hashtagicon.provider(),
+                      AssetImage(Assets.icons.hashtagicon.path),
                       color: Colors.white,
                       size: 16,
                     ),
