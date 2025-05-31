@@ -30,7 +30,7 @@ final class _Fonts {
 @immutable
 final class _Icons {
   _Icons._();
-
+  final String arrow = 'assets/icons/arrow.png';
   final String bluepen_png = 'assets/icons/bluepen.png';
   final String hashtagicon_png = 'assets/icons/hashtagicon.png';
   final String home_png = 'assets/icons/home.png';
@@ -49,6 +49,8 @@ final class _Icons {
   get user => null;
 
   get home => null;
+  
+  get arrow_png => null;
 
 }
 

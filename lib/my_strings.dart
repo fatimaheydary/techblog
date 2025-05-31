@@ -14,5 +14,11 @@ class MyStrings {
 ثبت نام کنی """;
 static const String insertemail="لطفا ایمیل خودت رو وارد کن";
 static const String myemail="fatimaheidari.2002@gmail.com";
+static const String activatecode="لطفا کد فعالسازی را وارد کنید";
+static const String successfulregistration="""
+ تبریک میگم ایمیل با موفقیت تایید شد
+  لطفااطلاعات ثبت نام رو کامل کن
+""";
+static const String choosecats="دسته بندی هایی که دوست داری رو انتخاب کن";
 
 }

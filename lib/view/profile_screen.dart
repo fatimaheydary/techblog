@@ -4,7 +4,7 @@ import 'package:tech_blog/assets.dart' as customAssets;
 import 'package:tech_blog/gen/assets.gen.dart';
 import 'package:tech_blog/models/fake_data.dart';
 import 'package:tech_blog/my_colors.dart';
-import 'package:tech_blog/my_component';
+import 'package:tech_blog/my_component.dart';
 import 'package:tech_blog/my_strings.dart';
  class ProfileScreen extends StatelessWidget {
 

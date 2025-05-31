@@ -5,7 +5,9 @@ import 'package:tech_blog/assets.dart' as customAssets;
 import 'package:tech_blog/gen/assets.gen.dart';
 import 'package:tech_blog/models/fake_data.dart';
 import 'package:tech_blog/my_colors.dart';
+import 'package:tech_blog/my_component.dart';
 import 'package:tech_blog/my_strings.dart';
+
 
 class homeScreen extends StatelessWidget {
   const homeScreen({
@@ -296,43 +298,14 @@ class homepagetaglist extends StatelessWidget {
               index == 0 ? bodymargin : 15,
               8,
             ),
-            child: Container(
-              height: 60,
-        
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(24),
-                ),
-                gradient: LinearGradient(
-                  colors: gradiantcolors.tags,
-                  begin: Alignment.centerRight,
-                  end: Alignment.centerLeft,
-                ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(16, 8, 8, 8),
-                child: Row(
-                  children: [
-                    ImageIcon(
-                      AssetImage(Assets.icons.hashtagicon.path),
-                      color: Colors.white,
-                      size: 16,
-                    ),
-                    SizedBox(width: 8),
-                    Text(
-                      tagList[index].title,
-                      style: textTheme.displayMedium,
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            child: maintags(textTheme: textTheme, index: index),
           );
         }),
       ),
     );
   }
 }
+
 
 class homepageposter extends StatelessWidget {
   const homepageposter({

@@ -4,6 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tech_blog/gen/assets.gen.dart';
 import 'package:tech_blog/my_colors.dart';
 import 'package:tech_blog/my_strings.dart';
+import 'package:tech_blog/view/my_cats.dart';
+import 'package:validators/validators.dart';
 //import 'package:tech_blog/assets.dart' as customAssets;
 
 class RegisterIntro extends StatelessWidget {
@@ -36,7 +38,7 @@ class RegisterIntro extends StatelessWidget {
                   onPressed: () {
                     _ShowEmailBottomSheet(context, size, textTheme);
                   },
-                
+
                   child: Text(
                     "بزن بریم",
                     style: TextStyle(color: Colors.white),
@@ -50,56 +52,130 @@ class RegisterIntro extends StatelessWidget {
     );
   }
 
-  Future<dynamic> _ShowEmailBottomSheet(BuildContext context, Size size, TextTheme textTheme) {
+  Future<dynamic> _ShowEmailBottomSheet(
+    BuildContext context,
+    Size size,
+    TextTheme textTheme,
+  ) {
     return showModalBottomSheet(
-                    isScrollControlled: true,
-                    context: context, 
-                  builder: ((context){
-                    return Padding(
-                      padding:  EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-                      child: Container(
-                        height: size.height/2.5,
-                        decoration: BoxDecoration(
-                      
-                          color: Colors.white,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(30),
-                            topRight: Radius.circular(30),
-                          ),
-                        ),
-                      child: Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(MyStrings.insertemail, style: textTheme.headlineLarge,),
-                            SizedBox(
-                            
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(32),
-                              child: TextField(
-                                textAlign: TextAlign.center,
-                                decoration:InputDecoration(
-                                  hintText: MyStrings.myemail,
-                                  hintStyle: textTheme.headlineMedium,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            ElevatedButton(onPressed: () {
-                              
-                            }, child: Text("ادامه",
-                            style: TextStyle(color: Colors.white),
-                            )),
-                          ],
-                        ),
+      isScrollControlled: true,
+      context: context,
+      builder: ((context) {
+        return Padding(
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(context).viewInsets.bottom,
+          ),
+          child: Container(
+            height: size.height / 2.5,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(30),
+                topRight: Radius.circular(30),
+              ),
+            ),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(MyStrings.insertemail, style: textTheme.headlineLarge),
+                  SizedBox(),
+                  Padding(
+                    padding: const EdgeInsets.all(32),
+                    child: TextField(
+                      onChanged: (value) {
+                        if (isEmail(value)) {
+                          print("valid email");
+                        } else {
+                          print("invalid email");
+                        }
+                      },
+
+                      textAlign: TextAlign.center,
+                      decoration: InputDecoration(
+                        hintText: MyStrings.myemail,
+                        hintStyle: textTheme.headlineMedium,
                       ),
-                      
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                        _ActivateCodeBottomSheet(context, size, textTheme);
+                    },
+                    child: Text("ادامه", style: TextStyle(color: Colors.white)),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      }),
+    );
+  }  Future<dynamic> _ActivateCodeBottomSheet(
+    BuildContext context,
+    Size size,
+    TextTheme textTheme,
+  ) {
+    return showModalBottomSheet(
+      isScrollControlled: true,
+      context: context,
+      builder: ((context) {
+        return Padding(
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(context).viewInsets.bottom,
+          ),
+          child: Container(
+            height: size.height / 2.5,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(30),
+                topRight: Radius.circular(30),
+              ),
+            ),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(MyStrings.activatecode, style: textTheme.headlineLarge),
+                  SizedBox(),
+                  Padding(
+                    padding: const EdgeInsets.all(32),
+                    child: TextField(
+                      onChanged: (value) {
+                        if (isEmail(value)) {
+                          print("valid email");
+                        } else {
+                          print("invalid email");
+                        }
+                      },
+
+                      textAlign: TextAlign.center,
+                      decoration: InputDecoration(
+                        hintText: "********",
+                        hintStyle: textTheme.headlineMedium,
                       ),
-                    );
-                  })
-                  );
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(builder: (context) => MyCats()),
+                      );
+                    },
+                    child: Text("ادامه", style: TextStyle(color: Colors.white)),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      }),
+    );
   }
 }
+//adb logcat | findstr /V EGL_emulation | findstr /V app_time_stats
+//adb --version

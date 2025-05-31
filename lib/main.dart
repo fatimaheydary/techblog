@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:tech_blog/my_colors.dart';
 import 'package:tech_blog/view/main_screen.dart';
+import 'package:tech_blog/view/my_cats.dart';
 import 'package:tech_blog/view/profile_screen.dart';
 import 'package:tech_blog/view/register_intro.dart';
 import 'package:tech_blog/view/splash_screen.dart';
@@ -118,7 +119,7 @@ inputDecorationTheme: InputDecorationTheme(
         )
       ),
       debugShowCheckedModeBanner: false,
-      home: RegisterIntro()
+      home: MyCats()
    ); 
      
   

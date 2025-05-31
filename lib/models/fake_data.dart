@@ -18,8 +18,11 @@ List<HashtagModel> tagList = [
   HashtagModel(title: "هوش مصنوعی"),
   HashtagModel(title: "iot"),
   HashtagModel(title: "دارت"),
+
  
 ];
+List<HashtagModel>selectedtag=[];
+
 List <PodcastModel> podcastlist =[
 PodcastModel(id: 1, imageUrl: "https://media.wired.com/photos/67d88e905c0123e49a6bb596/4:3/w_2240,c_limit/Machine-Readable_End-of-the-World.jpg", title: "مهم ترین خبر ها در برنامه نویسی"),
 PodcastModel(id: 2, imageUrl: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20221111190151/Top-Programming-Languages-School-Students-Should-Master-in-2023.png", title: "برنامه نویسی و دانشگاه"),
